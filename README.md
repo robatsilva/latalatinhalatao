@@ -1,3 +1,3 @@
 # latalatinhalatao
 
-Treinamento para aprender a criar um app.
+Treinamento para ensinar a criar um app.
