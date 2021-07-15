@@ -9,6 +9,7 @@
             padding: 0;
         }
         .caixa {
+            max-width: 720px;
             padding: 10px;
             display: flex;
             flex-direction: column;
@@ -16,10 +17,12 @@
             align-items: center;
         }
         .preco {
+            width: 100%;
             display: flex;
             justify-content: center;
             padding: 10px;
             margin: 10px;
+            font-size: 1.5em;
         }
         .resultado {
             display: flex;
@@ -30,14 +33,16 @@
             margin: 10px;
         }
         .valor{
+            flex: 1;
             border: 0px;
             border-bottom: 1px solid;
             border-left: 1px solid;
             border-right: 1px solid;
-            line-height: 25px;
-            font-size: 1.5em;
             margin-right: 10px;
             background-color: blanchedalmond;
+        }
+        .tipo {
+            flex: 1;
         }
     </style>
 </head>
@@ -47,7 +52,7 @@
         <h2>Digite o preço de uma lata e compare os preços abaixo</h2>
         <div class="preco">
             <input placeholder="Valor" class="valor" type="number"/>
-            <select>
+            <select class="tipo">
                 <option>
                     269 ml
                 </option>
