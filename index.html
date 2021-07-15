@@ -10,10 +10,16 @@
         }
         .caixa {
             padding: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
         .preco {
             display: flex;
+            justify-content: center;
             padding: 10px;
+            margin: 10px;
         }
         .resultado {
             display: flex;
@@ -28,15 +34,17 @@
             border-bottom: 1px solid;
             border-left: 1px solid;
             border-right: 1px solid;
-            line-height: 50px;
-            font-size: 50px;
+            line-height: 25px;
+            font-size: 25px;
+            margin-right: 10px;
             background-color: blanchedalmond;
         }
     </style>
 </head>
 <body>
     <div class="caixa">
-        <h1>Digite o preço de uma lata e compare os preços abaixo</h1>
+        <h1>Lata, Latinha ou Latão?</h1>
+        <h2>Digite o preço de uma lata e compare os preços abaixo</h2>
         <div class="preco">
             <input placeholder="Valor" class="valor" type="number"/>
             <select>
