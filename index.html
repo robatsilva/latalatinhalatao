@@ -4,18 +4,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wesley</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
         .caixa {
-            border: 1px solid black;
-            width: 720px;
-            height: 500px;
+            padding: 10px;
+        }
+        .preco {
+            display: flex;
+            padding: 10px;
+        }
+        .resultado {
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+        }
+        .resultado * {
+            margin: 10px;
+        }
+        .valor{
+            border: 0px;
+            border-bottom: 1px solid;
+            border-left: 1px solid;
+            border-right: 1px solid;
+            line-height: 50px;
+            font-size: 50px;
+            background-color: blanchedalmond;
         }
     </style>
 </head>
 <body>
     <div class="caixa">
-        teste
-        <input type="number"/>
-
+        <h1>Digite o preço de uma lata e compare os preços abaixo</h1>
+        <div class="preco">
+            <input placeholder="Valor" class="valor" type="number"/>
+            <select>
+                <option>
+                    269 ml
+                </option>
+                <option>
+                    350 ml
+                </option>
+                <option>
+                    473 ml
+                </option>
+            </select>
+        </div>
+        <div class="resultado">
+            <h3>Verifique qual lata compensa comprar</h3>
+            <p>Compre 269 ml se estiver abaixo de: R$ xx,xx</p>
+            <p>Compre 350 ml se estiver abaixo de: R$ xx,xx</p>
+            <p>Compre 473 ml se estiver abaixo de: R$ xx,xx</p>
+        </div>
     </div>
+
 </body>
 </html>
