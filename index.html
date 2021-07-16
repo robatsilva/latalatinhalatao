@@ -1,84 +1,60 @@
 <!DOCTYPE html>
 <html lang="pt">
-    <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lata latinha ou latão</title>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lata latinha ou latão?</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, Helvetica, sans-serif;
-        }
-        html, body{
-            height: 100%;
-        }
-        .caixa {
-            max-width: 720px;
-            padding: 10px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
-            align-items: center;
-            height: 100%;
-        }
-        .preco {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            padding: 10px;
-            margin: 10px;
-        }
-        .resultado {
-            display: flex;
-            flex-direction: column;
-            padding: 10px;
-        }
-        .resultado * {
-            margin: 10px;
-        }
-        .valor{
-            flex: 1;
-            border: 0px;
-            border-bottom: 1px solid;
-            border-left: 1px solid;
-            border-right: 1px solid;
-            background-color: blanchedalmond;
-            font-size: 2em;
-            margin-bottom: 20px;
-        }
-        .tipo {
-            flex: 1;
-            font-size: 2em;
-        }
+      * {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      html,
+      body {
+        height: 100%;
+      }
+      .caixa {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column;
+        height: 100%;
+        background-image: url('fundo.jfif');
+        padding: 10px;
+      }
+
+      .valor {
+        border: 0;
+        border-bottom: 1px solid;
+        border-left: 1px solid;
+        border-right: 1px solid;
+        background-color: blanchedalmond;
+        font-size: 2em;
+        width: 100%;
+      }
+      .tipo {
+        font-size: 2em;
+        width: 100%;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="caixa">
-        <h2>Lata, Latinha ou Latão?</h2>
-        <p>Digite o preço de uma lata e compare os preços abaixo</p>
+      <h2>Lata latinha ou Latão</h2>
+      <p>Digite o preço de uma lata e compare os preços abaixo</p>
 
-        <div class="preco">
-            <input placeholder="Valor" class="valor" type="number"/>
-            <select class="tipo">
-                <option>
-                    269 ml
-                </option>
-                <option>
-                    350 ml
-                </option>
-                <option>
-                    473 ml
-                </option>
-            </select>
-        </div>
-        <div class="resultado">
-            <h3>Verifique qual lata compensa comprar</h3>
-            <p>Compre 269 ml se estiver abaixo de: R$ xx,xx</p>
-            <p>Compre 350 ml se estiver abaixo de: R$ xx,xx</p>
-            <p>Compre 473 ml se estiver abaixo de: R$ xx,xx</p>
-        </div>
+      <input class="valor" placeholder="Digite o valor" type="number" />
+      <select class="tipo">
+        <option>269 ml</option>
+        <option>350 ml</option>
+        <option>473 ml</option>
+      </select>
+      <div>
+        <h3>Verifique qual lata compensa comprar</h3>
+        <p>Compre 269 ml se estiver abaixo de R$ xx,xx</p>
+        <p>Compre 350 ml se estiver abaixo de R$ xx,xx</p>
+        <p>Compre 473 ml se estiver abaixo de R$ xx,xx</p>
+      </div>
     </div>
-
-</body>
+  </body>
 </html>
