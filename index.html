@@ -8,7 +8,7 @@
         font-family: Arial, Helvetica, sans-serif;
         margin: 0;
         padding: 0;
-      }
+      } 
       html,
       body {
         height: 100%;
@@ -37,13 +37,27 @@
         width: 100%;
       }
     </style>
+
+    <script type="text/javascript">
+      function calcular() {
+        alert('chamou a função');
+        alert('Exibiu outra mensagem');
+        alert('Vai calcular 2 + 2');
+        alert(2 + 2);
+      }
+    </script>
   </head>
   <body>
+    <div>o quer por dentro</div>
+
     <div class="caixa">
       <h2>Lata latinha ou Latão</h2>
       <p>Digite o preço de uma lata e compare os preços abaixo</p>
 
       <input class="valor" placeholder="Digite o valor" type="number" />
+
+      <button onclick="calcular()">Calcular</button>
+  
       <select class="tipo">
         <option>269 ml</option>
         <option>350 ml</option>
