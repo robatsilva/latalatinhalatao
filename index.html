@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lata latinha ou latão?</title>
     <style>
+      /* aqui começa o css */
       * {
         font-family: Arial, Helvetica, sans-serif;
         margin: 0;
@@ -36,39 +37,84 @@
         font-size: 2em;
         width: 100%;
       }
+      /* comentário no css é igual o comentário em bloco no javascript*/
     </style>
-
-    <script type="text/javascript">
-      function calcular() {
-        alert('chamou a função');
-        alert('Exibiu outra mensagem');
-        alert('Vai calcular 2 + 2');
-        alert(2 + 2);
-      }
-    </script>
+    <!--
+      comentários no html começam com < ! - - e terminam com - - >
+      eu posso escrever mais de uma linha no comentário
+      funciona em bloco
+      
+    -->
   </head>
   <body>
-    <div>o quer por dentro</div>
-
     <div class="caixa">
       <h2>Lata latinha ou Latão</h2>
       <p>Digite o preço de uma lata e compare os preços abaixo</p>
 
-      <input class="valor" placeholder="Digite o valor" type="number" />
+      <input id="valorLata" class="valor" placeholder="Digite o valor" type="number" />
 
       <button onclick="calcular()">Calcular</button>
   
-      <select class="tipo">
-        <option>269 ml</option>
-        <option>350 ml</option>
-        <option>473 ml</option>
+      <select id="valorML" class="tipo">
+        <option value="269">269 ml</option>
+        <option value="350">350 ml</option>
+        <option value="473">473 ml</option>
       </select>
       <div>
         <h3>Verifique qual lata compensa comprar</h3>
-        <p>Compre 269 ml se estiver abaixo de R$ xx,xx</p>
-        <p>Compre 350 ml se estiver abaixo de R$ xx,xx</p>
-        <p>Compre 473 ml se estiver abaixo de R$ xx,xx</p>
+        <p>Compre 269 ml se estiver abaixo de R$ <span id="texto269">xx,xx</span></p>
+        <p>Compre 350 ml se estiver abaixo de R$ <span id="texto350">xx,xx</span></p>
+        <p>Compre 473 ml se estiver abaixo de R$ <span id="texto473">xx,xx</span></p>
       </div>
     </div>
   </body>
+  <script type="text/javascript">
+    // Aqui começa o javascript
+    // Esse comentário é apenas de uma linha
+    // Também posso fazerm em bloco no javascript:
+    /*
+      esse é um comentário de bloco
+      também posso escrevem em mais de uma linha
+    */
+
+    //Tudo que eu por logo depois do <script> o navegador vai executar assim que carrega a página
+    // exemplo, essa mensagem vai exibir quando carregar a página
+    // alert('Está carregando a página'); //Você pode tirar o comentário pra brincar
+
+    function calcular() {
+      //funções precisam ser chamadas
+      //Declarando as variáveis
+      let valorLata;
+      let texto269;
+      let texto350;
+      let texto473;
+      let valorML;
+
+      //atribuindo à variável o valor do <input>
+      valorLata = document.getElementById('valorLata').value;
+      valorML = document.getElementById('valorML').value;
+
+      //atribuindo a variável o próprio span ( que possui propriedades )
+      //ex: value, innerText ...
+      //esses valores podem ser acessados para fazer alguma manipulação ou lógico
+      texto269 = document.getElementById('texto269');
+      texto350 = document.getElementById('texto350');
+      texto473 = document.getElementById('texto473');
+      
+      //aqui então estamos pegando a propriedade do span e atribuindo um valor, que é o valorLata
+      texto350.innerText = regra3(valorML, 350, valorLata);
+      texto473.innerText = regra3(valorML, 473, valorLata);
+      texto269.innerText = regra3(valorML, 269, valorLata);
+    }
+
+    //Parametros
+    function regra3(v1G1, v2G1, v1G2) {
+      let x;
+
+      x = (v2G1 * v1G2) / v1G1;
+  
+      //retornar o valor pra quem chamou
+      return x.toFixed(2);
+    }
+  </script>
 </html>
