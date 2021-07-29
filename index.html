@@ -37,6 +37,32 @@
         font-size: 2em;
         width: 100%;
       }
+
+      .caixa-textos {
+        background-color: red;
+      }
+
+      .caixa-latas{
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+      }
+
+      .lata{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        background-color: white;
+        box-shadow: 5px 5px 3px rgb(97, 95, 95);
+        width: 30%;
+        height: 180px;
+      }
+
+      img {
+        max-width: 100%;
+        max-height: 100%;
+      }
+
       /* comentário no css é igual o comentário em bloco no javascript*/
     </style>
     <!--
@@ -60,12 +86,31 @@
         <option value="350">350 ml</option>
         <option value="473">473 ml</option>
       </select>
-      <div>
+
+      <div class="caixa-latas">
+        <div class="lata lata1">
+          <span>269 ml</span>
+          <img src="lata.png">
+          <span>R$ xx,xx</span>
+        </div>
+        <div class="lata lata2">
+          <span>350 ml</span>
+          <img src="lata.png">
+          <span>R$ xx,xx</span>
+        </div>
+        <div class="lata lata3">
+          <span>473 ml</span>
+          <img src="lata.png">
+          <span>R$ xx,xx</span>
+        </div>
+      </div>
+
+      <!-- <div class="caixa-textos">
         <h3>Verifique qual lata compensa comprar</h3>
         <p>Compre 269 ml se estiver abaixo de R$ <span id="texto269">xx,xx</span></p>
         <p>Compre 350 ml se estiver abaixo de R$ <span id="texto350">xx,xx</span></p>
         <p>Compre 473 ml se estiver abaixo de R$ <span id="texto473">xx,xx</span></p>
-      </div>
+      </div> -->
     </div>
   </body>
   <script type="text/javascript">
