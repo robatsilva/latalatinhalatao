@@ -60,7 +60,7 @@
 
       img {
         max-width: 100%;
-        max-height: 100%;
+        max-height: 80%;
       }
 
       /* comentário no css é igual o comentário em bloco no javascript*/
@@ -73,44 +73,48 @@
     -->
   </head>
   <body>
+    <!--Div cria caixas-->
+    <!-- usa "class" para usar no css -->
     <div class="caixa">
+      <!--Título, exite de h1 até h6, cada um tem um tamanho de fonte-->
       <h2>Lata latinha ou Latão</h2>
+
+      <!-- paragrafo, ele pula uma linha -->
       <p>Digite o preço de uma lata e compare os preços abaixo</p>
 
+      <!-- Um elemento onde o usuário pode digitar -->
+      <!-- possui várias atributo, como placeholder (dica que aparece até digitar), type (tipo do input) -->
       <input id="valorLata" class="valor" placeholder="Digite o valor" type="number" />
 
+      <!-- Botão -->
       <button onclick="calcular()">Calcular</button>
   
+      <!-- Cria uma caixa com opções -->
       <select id="valorML" class="tipo">
-        <option value="269">269 ml</option>
-        <option value="350">350 ml</option>
-        <option value="473">473 ml</option>
+        <!-- cada option é uma opção -->
+        <!-- tem o atributo value, que é o valor que vai ser usado na programação, o texto dentro do option é o que é exibido -->
+        <option value="269">Latinha 269 ml</option>
+        <option value="350">Lata 350 ml</option>
+        <option value="473">Latão 473 ml</option>
       </select>
 
       <div class="caixa-latas">
-        <div class="lata lata1">
+        <div class="lata">
           <span>269 ml</span>
           <img src="lata.png">
-          <span>R$ xx,xx</span>
+          <p>R$ <span id="texto269">xx,xx</span></p>
         </div>
-        <div class="lata lata2">
+        <div class="lata">
           <span>350 ml</span>
           <img src="lata.png">
-          <span>R$ xx,xx</span>
+          <p>R$ <span id="texto350">xx,xx</span></p>
         </div>
-        <div class="lata lata3">
+        <div class="lata">
           <span>473 ml</span>
           <img src="lata.png">
-          <span>R$ xx,xx</span>
+          <p>R$ <span id="texto473">xx,xx</span></p>
         </div>
       </div>
-
-      <!-- <div class="caixa-textos">
-        <h3>Verifique qual lata compensa comprar</h3>
-        <p>Compre 269 ml se estiver abaixo de R$ <span id="texto269">xx,xx</span></p>
-        <p>Compre 350 ml se estiver abaixo de R$ <span id="texto350">xx,xx</span></p>
-        <p>Compre 473 ml se estiver abaixo de R$ <span id="texto473">xx,xx</span></p>
-      </div> -->
     </div>
   </body>
   <script type="text/javascript">
