@@ -1,185 +1,189 @@
 <!DOCTYPE html>
 <html lang="pt">
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lata, latinha ou latão </title>
-    <style>
-      /* aqui começa o css */
-      * {
-        font-family: Arial, Helvetica, sans-serif;
-        margin: 0;
-        padding: 0;
-      } 
-      html,
-      body {
-        height: 100%;
-      }
-      .caixa {
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-        flex-direction: column;
-        height: 100%;
-        background-image: url('fundo.jfif');
-        padding: 10px;
-      }
 
-      .valor {
-        border: 0;
-        border-bottom: 1px solid;
-        border-left: 1px solid;
-        border-right: 1px solid;
-        background-color: blanchedalmond;
-        font-size: 2em;
-        width: 100%;
-      }
-      .tipo {
-        font-size: 2em;
-        width: 100%;
-      }
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lata, latinha ou latão </title>
+  <style>
+    /* aqui começa o css */
+    * {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
 
-      .caixa-textos {
-        background-color: red;
-      }
+    html,
+    body {
+      height: 100%;
+    }
 
-      .caixa-latas{
-        display: flex;
-        justify-content: space-evenly;
-        width: 100%;
-      }
+    .caixa {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      flex-direction: column;
+      height: 100%;
+      background-image: url('fundo.jfif');
+      padding: 10px;
+    }
 
-      .lata{
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        background-color: white;
-        box-shadow: 5px 5px 3px rgb(97, 95, 95);
-        width: 30%;
-        height: 180px;
-      }
+    .valor {
+      border: 0;
+      border-bottom: 1px solid;
+      border-left: 1px solid;
+      border-right: 1px solid;
+      background-color: blanchedalmond;
+      font-size: 2em;
+      width: 100%;
+    }
 
-      img {
-        max-width: 100%;
-        max-height: 80%;
-      }
+    .tipo {
+      font-size: 2em;
+      width: 100%;
+    }
 
-      /* comentário no css é igual o comentário em bloco no javascript*/
-    </style>
-    <!--
+    .caixa-textos {
+      background-color: red;
+    }
+
+    .caixa-latas {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      width: 100%;
+    }
+
+    .lata {
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      background-color: white;
+      box-shadow: 5px 5px 3px rgb(97, 95, 95);
+      width: 30%;
+      height: 180px;
+    }
+
+    img {
+      max-width: 100%;
+      max-height: 80%;
+    }
+
+    /* comentário no css é igual o comentário em bloco no javascript*/
+  </style>
+  <!--
       comentários no html começam com < ! - - e terminam com - - >
       eu posso escrever mais de uma linha no comentário
       funciona em bloco
       
     -->
-  </head>
-  <body>
-    <!--Div cria caixas-->
-    <!-- usa "class" para usar no css -->
-    <div class="caixa">
-      <!--Título, exite de h1 até h6, cada um tem um tamanho de fonte-->
-      <h2>Lata latinha ou Latão</h2>
+</head>
 
-      <!-- paragrafo, ele pula uma linha -->
-      <p>Digite o preço de uma lata e compare os preços abaixo</p>
+<body>
+  <!--Div cria caixas-->
+  <!-- usa "class" para usar no css -->
+  <div class="caixa">
+    <!--Título, exite de h1 até h6, cada um tem um tamanho de fonte-->
+    <h2>Lata, latinha ou latão</h2>
 
-      <!-- Um elemento onde o usuário pode digitar -->
-      <!-- possui várias atributo, como placeholder (dica que aparece até digitar), type (tipo do input) -->
-      <input id="valorLata" class="valor" placeholder="Digite o valor" type="number" />
+    <!-- paragrafo, ele pula uma linha -->
+    <p>Escolha a lata, digite o preço e encontre a lata mais economica</p>
 
-      <!-- Botão -->
-      <button onclick="calcular()">Calcular</button>
-  
-      <!-- Cria uma caixa com opções -->
-      <select id="valorML" class="tipo">
-        <!-- cada option é uma opção -->
-        <!-- tem o atributo value, que é o valor que vai ser usado na programação, o texto dentro do option é o que é exibido -->
-        <option value="269">Latinha 269 ml</option>
-        <option value="350">Lata 350 ml</option>
-        <option value="473">Latão 473 ml</option>
-        <option value="600">garrafa 600 ml</option>
-        <option value="1000">litrão 1000 ml</option>
-      </select>
+    <!-- Cria uma caixa com opções -->
+    <select onchange="calcular()" id="valorML" class="tipo">
+      <!-- cada option é uma opção -->
+      <!-- tem o atributo value, que é o valor que vai ser usado na programação, o texto dentro do option é o que é exibido -->
+      <option value="269">Latinha 269 ml</option>
+      <option value="350">Lata 350 ml</option>
+      <option value="473">Latão 473 ml</option>
+      <option value="600">garrafa 600 ml</option>
+      <option value="1000">litrão 1000 ml</option>
+    </select>
+    <!-- Um elemento onde o usuário pode digitar -->
+    <!-- possui várias atributo, como placeholder (dica que aparece até digitar), type (tipo do input) -->
+    <input onkeyup="calcular()" id="valorLata" class="valor" placeholder="Digite o valor" type="number" />
 
-      <div class="caixa-latas">
-        <div class="lata">
-          <span>269 ml</span>
-          <img src="lata.png">
-          <p>R$ <span id="texto269">xx,xx</span></p>
-        </div>
-        <div class="lata">
-          <span>350 ml</span>
-          <img src="lata.png">
-          <p>R$ <span id="texto350">xx,xx</span></p>
-        </div>
-        <div class="lata">
-          <span>473 ml</span>
-          <img src="lata.png">
-          <p>R$ <span id="texto473">xx,xx</span></p>
-          </div>
-          <div class="lata">
-          <span>600 ml</span>
-          <img src="lata.png">
-          <p>R$ <span id="texto600">xx,xx</span></p>
-        </div>
-        <div class="lata">
+    <div class="caixa-latas">
+      <div class="lata">
+        <span>269 ml</span>
+        <img src="lata.png">
+        <p>R$ <span id="texto269">xx,xx</span></p>
+      </div>
+      <div class="lata">
+        <span>350 ml</span>
+        <img src="lata.png">
+        <p>R$ <span id="texto350">xx,xx</span></p>
+      </div>
+      <div class="lata">
+        <span>473 ml</span>
+        <img src="lata.png">
+        <p>R$ <span id="texto473">xx,xx</span></p>
+      </div>
+      <div class="lata">
+        <span>600 ml</span>
+        <img src="lata.png">
+        <p>R$ <span id="texto600">xx,xx</span></p>
+      </div>
+      <div class="lata">
         <span>1000 ml</span>
         <img src="lata.png">
-        <p>R$ <span id="texto1000">xx,xx</span></p>  
+        <p>R$ <span id="texto1000">xx,xx</span></p>
       </div>
     </div>
-  </body>
-  <script type="text/javascript">
-    // Aqui começa o javascript
-    // Esse comentário é apenas de uma linha
-    // Também posso fazerm em bloco no javascript:
-    /*
-      esse é um comentário de bloco
-      também posso escrevem em mais de uma linha
-    */
+</body>
+<script type="text/javascript">
+  // Aqui começa o javascript
+  // Esse comentário é apenas de uma linha
+  // Também posso fazerm em bloco no javascript:
+  /*
+    esse é um comentário de bloco
+    também posso escrevem em mais de uma linha
+  */
 
-    //Tudo que eu por logo depois do <script> o navegador vai executar assim que carrega a página
-    // exemplo, essa mensagem vai exibir quando carregar a página
-    // alert('Está carregando a página'); //Você pode tirar o comentário pra brincar
+  //Tudo que eu por logo depois do <script> o navegador vai executar assim que carrega a página
+  // exemplo, essa mensagem vai exibir quando carregar a página
+  // alert('Está carregando a página'); //Você pode tirar o comentário pra brincar
 
-    function calcular() {
-      //funções precisam ser chamadas
-      //Declarando as variáveis
-      let valorLata;
-      let texto269;
-      let texto350;
-      let texto473;
-      let texto600;
-      let texto1000;
-      let valorML;
+  function calcular() {
+    //funções precisam ser chamadas
+    //Declarando as variáveis
+    let valorLata;
+    let texto269;
+    let texto350;
+    let texto473;
+    let texto600;
+    let texto1000;
+    let valorML;
 
-      //atribuindo à variável o valor do <input>
-      valorLata = document.getElementById('valorLata').value;
-      valorML = document.getElementById('valorML').value;
+    //atribuindo à variável o valor do <input>
+    valorLata = document.getElementById('valorLata').value;
+    valorML = document.getElementById('valorML').value;
 
-      //atribuindo a variável o próprio span ( que possui propriedades )
-      //ex: value, innerText ...
-      //esses valores podem ser acessados para fazer alguma manipulação ou lógico
-      texto269 = document.getElementById('texto269');
-      texto350 = document.getElementById('texto350');
-      texto473 = document.getElementById('texto473');
-      texto600 = document.getElementById('texto600');
-      texto1000 = document.getElementById('texto1000');
-      //aqui então estamos pegando a propriedade do span e atribuindo um valor, que é o valorLata
-      texto350.innerText = regra3(valorML, 350, valorLata);
-      texto473.innerText = regra3(valorML, 473, valorLata);
-      texto269.innerText = regra3(valorML, 269, valorLata);
-      texto600.innerText = regra3(valorML, 600, valorLata);
-      texto1000.innerText = regra3(valorML, 1000, valorLata);
-    }
+    //atribuindo a variável o próprio span ( que possui propriedades )
+    //ex: value, innerText ...
+    //esses valores podem ser acessados para fazer alguma manipulação ou lógico
+    texto269 = document.getElementById('texto269');
+    texto350 = document.getElementById('texto350');
+    texto473 = document.getElementById('texto473');
+    texto600 = document.getElementById('texto600');
+    texto1000 = document.getElementById('texto1000');
+    //aqui então estamos pegando a propriedade do span e atribuindo um valor, que é o valorLata
+    texto350.innerText = regra3(valorML, 350, valorLata);
+    texto473.innerText = regra3(valorML, 473, valorLata);
+    texto269.innerText = regra3(valorML, 269, valorLata);
+    texto600.innerText = regra3(valorML, 600, valorLata);
+    texto1000.innerText = regra3(valorML, 1000, valorLata);
+  }
 
-    //Parametros
-    function regra3(v1G1, v2G1, v1G2) {
-      let x;
+  //Parametros
+  function regra3(v1G1, v2G1, v1G2) {
+    let x;
 
-      x = (v2G1 * v1G2) / v1G1;
-  
-      //retornar o valor pra quem chamou
-      return x.toFixed(2);
-    }
-  </script>
+    x = (v2G1 * v1G2) / v1G1;
+
+    //retornar o valor pra quem chamou
+    return x.toFixed(2);
+  }
+</script>
+
 </html>
