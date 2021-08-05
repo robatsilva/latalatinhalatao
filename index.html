@@ -2,7 +2,7 @@
 <html lang="pt">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lata </title>
+    <title>Lata, latinha ou latão </title>
     <style>
       /* aqui começa o css */
       * {
@@ -96,6 +96,8 @@
         <option value="269">Latinha 269 ml</option>
         <option value="350">Lata 350 ml</option>
         <option value="473">Latão 473 ml</option>
+        <option value="600">garrafa 600 ml</option>
+        <option value="1000">litrão 1000 ml</option>
       </select>
 
       <div class="caixa-latas">
@@ -113,7 +115,16 @@
           <span>473 ml</span>
           <img src="lata.png">
           <p>R$ <span id="texto473">xx,xx</span></p>
+          </div>
+          <div class="lata">
+          <span>600 ml</span>
+          <img src="lata.png">
+          <p>R$ <span id="texto600">xx,xx</span></p>
         </div>
+        <div class="lata">
+        <span>1000 ml</span>
+        <img src="lata.png">
+        <p>R$ <span id="texto1000">xx,xx</span></p>  
       </div>
     </div>
   </body>
@@ -137,6 +148,8 @@
       let texto269;
       let texto350;
       let texto473;
+      let texto600;
+      let texto1000;
       let valorML;
 
       //atribuindo à variável o valor do <input>
@@ -149,11 +162,14 @@
       texto269 = document.getElementById('texto269');
       texto350 = document.getElementById('texto350');
       texto473 = document.getElementById('texto473');
-      
+      texto600 = document.getElementById('texto600');
+      texto1000 = document.getElementById('texto1000');
       //aqui então estamos pegando a propriedade do span e atribuindo um valor, que é o valorLata
       texto350.innerText = regra3(valorML, 350, valorLata);
       texto473.innerText = regra3(valorML, 473, valorLata);
       texto269.innerText = regra3(valorML, 269, valorLata);
+      texto600.innerText = regra3(valorML, 600, valorLata);
+      texto1000.innerText = regra3(valorML, 1000, valorLata);
     }
 
     //Parametros
