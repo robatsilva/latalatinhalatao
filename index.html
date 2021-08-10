@@ -34,12 +34,14 @@
       border-right: 1px solid;
       background-color: blanchedalmond;
       font-size: 2em;
-      width: 100%;
+      width: 40%;
+      justify-content: end;
     }
 
     .tipo {
       font-size: 2em;
-      width: 100%;
+      width: 40%;
+      justify-content: center;
     }
 
     .caixa-textos {
@@ -62,6 +64,14 @@
       box-shadow: 5px 5px 3px rgb(97, 95, 95);
       width: 30%;
       height: 180px;
+    }
+
+    .selectinput {
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+      display: inline-flexbox;
+      width: 100%;
     }
 
     img {
@@ -90,7 +100,7 @@
     <p>Escolha a lata, digite o preço e encontre a lata mais economica</p>
 
     <!-- Cria uma caixa com opções -->
-    <select onchange="calcular()" id="valorML" class="tipo">
+  <div class="selectinput"><select onchange="calcular()" id="valorML" class="tipo"></div>
       <!-- cada option é uma opção -->
       <!-- tem o atributo value, que é o valor que vai ser usado na programação, o texto dentro do option é o que é exibido -->
       <option value="269">Latinha 269 ml</option>
@@ -101,7 +111,7 @@
     </select>
     <!-- Um elemento onde o usuário pode digitar -->
     <!-- possui várias atributo, como placeholder (dica que aparece até digitar), type (tipo do input) -->
-    <input onkeyup="calcular()" id="valorLata" class="valor" placeholder="Digite o valor" type="number" />
+    <span class="selectinput"><input onkeyup="calcular()" id="valorLata" class="valor" placeholder="Digite o valor" type="number" /></span>
 
     <div class="caixa-latas">
       <div class="lata">
