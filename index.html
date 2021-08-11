@@ -70,7 +70,7 @@
       flex-direction: row;
       justify-content: space-evenly;
       align-items: center;
-      display: inline-flexbox;
+      display: flex;
       width: 100%;
     }
 
@@ -100,41 +100,42 @@
     <p>Escolha a lata, digite o preço e encontre a lata mais economica</p>
 
     <!-- Cria uma caixa com opções -->
-  <div class="selectinput"><select onchange="calcular()" id="valorML" class="tipo"></div>
-      <!-- cada option é uma opção -->
-      <!-- tem o atributo value, que é o valor que vai ser usado na programação, o texto dentro do option é o que é exibido -->
-      <option value="269">Latinha 269 ml</option>
-      <option value="350">Lata 350 ml</option>
-      <option value="473">Latão 473 ml</option>
-      <option value="600">garrafa 600 ml</option>
-      <option value="1000">litrão 1000 ml</option>
-    </select>
-    <!-- Um elemento onde o usuário pode digitar -->
-    <!-- possui várias atributo, como placeholder (dica que aparece até digitar), type (tipo do input) -->
-    <span class="selectinput"><input onkeyup="calcular()" id="valorLata" class="valor" placeholder="Digite o valor" type="number" /></span>
-
+    <div class="selectinput">
+      <select onchange="selectMudou()" id="valorML" class="tipo">
+        <!-- cada option é uma opção -->
+        <!-- tem o atributo value, que é o valor que vai ser usado na programação, o texto dentro do option é o que é exibido -->
+        <option value="269">Latinha 269 ml</option>
+        <option value="350">Lata 350 ml</option>
+        <option value="473">Latão 473 ml</option>
+        <option value="600">garrafa 600 ml</option>
+        <option value="1000">litrão 1000 ml</option>
+      </select>
+      <!-- Um elemento onde o usuário pode digitar -->
+      <!-- possui várias atributo, como placeholder (dica que aparece até digitar), type (tipo do input) -->
+      <input onkeyup="calcular()" id="valorLata" class="valor" placeholder="Digite o valor" type="number" />
+    </div>
     <div class="caixa-latas">
-      <div class="lata">
+      <div class="lata" id='lata269'>
         <span>269 ml</span>
         <img src="lata.png">
         <p>R$ <span id="texto269">xx,xx</span></p>
       </div>
-      <div class="lata">
+      <div class="lata" id='lata350'>
         <span>350 ml</span>
         <img src="lata.png">
         <p>R$ <span id="texto350">xx,xx</span></p>
       </div>
-      <div class="lata">
+      <div class="lata" id='lata473'>
         <span>473 ml</span>
         <img src="lata.png">
         <p>R$ <span id="texto473">xx,xx</span></p>
       </div>
-      <div class="lata">
+      <div class="lata" id='lata600'>
         <span>600 ml</span>
         <img src="lata.png">
         <p>R$ <span id="texto600">xx,xx</span></p>
       </div>
-      <div class="lata">
+      <div class="lata" id='lata1000'>
         <span>1000 ml</span>
         <img src="lata.png">
         <p>R$ <span id="texto1000">xx,xx</span></p>
@@ -153,7 +154,42 @@
   //Tudo que eu por logo depois do <script> o navegador vai executar assim que carrega a página
   // exemplo, essa mensagem vai exibir quando carregar a página
   // alert('Está carregando a página'); //Você pode tirar o comentário pra brincar
+  function selectMudou() {
+    let valorML;
+    valorML = document.getElementById('valorML').value;
 
+    if (valorML == 269) {
+      document.getElementById("lata269").style.display = 'none';
+    } else {
+      document.getElementById("lata269").style.display = 'flex';
+
+    }
+    if (valorML == 350) {
+      document.getElementById("lata350").style.display = 'none';
+    } else {
+      document.getElementById("lata350").style.display = 'flex';
+
+    }
+    if (valorML == 473) {
+      document.getElementById("lata473").style.display = 'none';
+    } else {
+      document.getElementById("lata473").style.display = 'flex';
+
+    }
+    if (valorML == 600) {
+      document.getElementById("lata600").style.display = 'none'
+    } else {
+      document.getElementById("lata600").style.display = 'flex';
+
+    }
+    if (valorML == 1000) {
+      document.getElementById("lata1000").style.display = 'none'
+    } else {
+      document.getElementById("lata1000").style.display = 'flex';
+
+    }
+    calcular()
+  }
   function calcular() {
     //funções precisam ser chamadas
     //Declarando as variáveis
