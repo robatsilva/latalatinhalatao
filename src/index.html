@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lata, latinha ou latão </title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+  <div class="caixa">
+
+    <h2>Lata, latinha ou latão</h2>
+
+    <p>Escolha a lata, digite o preço e encontre a lata mais economica</p>
+
+    <div class="selectinput">
+      <select onchange="selectMudou()" id="valorML" class="tipo">
+       
+        <option value="269">Latinha 269 ml</option>
+        <option value="350">Lata 350 ml</option>
+        <option value="473">Latão 473 ml</option>
+        <option value="600">garrafa 600 ml</option>
+        <option value="1000">litrão 1000 ml</option>
+      </select>
+    
+      <input onkeyup="calcular()" id="valorLata" class="valor" placeholder="Digite o valor" type="number" />
+    </div>
+    <div class="caixa-latas">
+      <div class="lata" id='lata269'>
+        <span>269 ml</span>
+        <img src="../img/lata269.png">
+        <p>R$ <span id="texto269">xx,xx</span></p>
+      </div>
+      <div class="lata" id='lata350'>
+        <span>350 ml</span>
+        <img src="../img/lata.png">
+        <p>R$ <span id="texto350">xx,xx</span></p>
+      </div>
+      <div class="lata" id='lata473'>
+        <span>473 ml</span>
+        <img src="../img/lata473.png">
+        <p>R$ <span id="texto473">xx,xx</span></p>
+      </div>
+      <div class="lata" id='lata600'>
+        <span>600 ml</span>
+        <img src="../img/garrafa600.png">
+        <p>R$ <span id="texto600">xx,xx</span></p>
+      </div>
+      <div class="lata" id='lata1000'>
+        <span>1000 ml</span>
+        <img src="../img/litrao.png">
+        <p>R$ <span id="texto1000">xx,xx</span></p>
+      </div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
