@@ -1,15 +1,29 @@
 <!DOCTYPE html>
+<!--é a declaração de qual tipo de documento HTML você está trabalhando na sua página web.-->
 <html lang="pt">
+<!--é a linguagem que estamos estamos no portugues -->
 
 <head>
+  <!--sao documentos em html so que nao serao exibidos no navegador da web quando a pagina for carregada-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!--
+    meta=O HTML5 introduziu um método para permitir que os web designers controlem a janela de visualização, por meio da <meta>tag.
+    viewport=é área visível em dispositivo do usuário onde se deve visualizar o site, e varia de acordo com o dispositivo de acesso.
+    "width=device-width=define a largura da página para seguir a largura da tela do dispositivo que irá variar dependendo do dispositivo.
+     initial-scale=1.0=define o nível de zoom inicial quando a página é carregada pela primeira vez pelo navegador.  
+  -->
   <title>Lata, latinha ou latão </title>
+  <!--aqui colocamos o titulo -->
   <style>
+    /* estilo aqui iremos deixar com uma aparencia melhor */
     /* aqui começa o css */
     * {
       font-family: Arial, Helvetica, sans-serif;
+      /*selecionamos os formatos das letras que estamos utilizando */
       margin: 0;
+      /* espacamento fora do conteudo*/
       padding: 0;
+      /*Preenchimento - Espaçamento dentro dos limites do conteúdo.*/
     }
 
     html,
@@ -19,12 +33,19 @@
 
     .caixa {
       display: flex;
+      /*Define o elemento como um flex container, tornando os seus filhos flex-itens.*/
       align-items: center;
+      /* alinhar os itens centralizados*/
       justify-content: space-evenly;
+      /*distribuir itens uniformemente os itens tem espaco igual ao seu redor */
       flex-direction: column;
+      /* deixamos nossa caixas em formato de coluna uma embaixo da outra*/
       height: 100%;
+      /*altura com 100% é para deixar alinhado tudo que colocamos dentro */
       background-image: url('fundo.jfif');
+      /* escolhemos uma imagem de fundo */
       padding: 10px;
+      /* espacemento dentro dos limites do conteudo*/
     }
 
     .valor {
@@ -37,7 +58,7 @@
       width: 40%;
       justify-content: end;
       height: 40px;
-      
+
     }
 
     .tipo {
@@ -57,7 +78,7 @@
       justify-content: space-evenly;
       width: 100%;
     }
-    
+
     .lata {
       margin-bottom: 20px;
       display: flex;
@@ -65,6 +86,7 @@
       flex-direction: column;
       background-color: #ff950075;
       border-radius: 10px;
+      /* fez uma borda redondada nos quadrados onde ficam as latas*/
       width: 30%;
       height: 180px;
     }
@@ -75,10 +97,10 @@
       align-items: center;
       display: flex;
       width: 100%;
-      
-      
+
+
     }
-    
+
 
     img {
       max-width: 100%;
@@ -110,7 +132,7 @@
       <select onchange="selectMudou()" id="valorML" class="tipo">
         <!-- cada option é uma opção -->
         <!-- tem o atributo value, que é o valor que vai ser usado na programação, o texto dentro do option é o que é exibido -->
-        <option value=""disabled selected hidden >Escolha sua lata</option>
+        <option value="" disabled selected hidden>Escolha sua lata</option>
         <option value="269">Latinha 269 ml</option>
         <option value="350">Lata 350 ml</option>
         <option value="473">Latão 473 ml</option>
@@ -164,7 +186,9 @@
   function selectMudou() {
     let valorML;
     valorML = document.getElementById('valorML').value;
-
+    // document.getElementById=Retorna uma referência do elemento através do seu ID .
+    // if e Else=A condicional if  é uma estrutura condicional que executa a afirmação,
+    // dentro do bloco, se determinada condição for verdadeira. Se for falsa, executa as afirmações dentro de else.
     if (valorML == 269) {
       document.getElementById("lata269").style.display = 'none';
     } else {
