@@ -18,6 +18,14 @@
     background-image: url('../img/fundo.jfif');
     padding: 10px;
     min-height: 100%;
+    margin-top: 64px;
+  }
+  .header {
+    height: 64px;
+    background-color: brown;
+    width: 100%;
+    position: fixed;
+    top: 0;
   }
 
   .valor {
