@@ -1,0 +1,79 @@
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  html,
+  body {
+    height: 100%;
+  }
+
+  .caixa {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    background-image: url('../img/fundo.jfif');
+    padding: 10px;
+    min-height: 100%;
+  }
+
+  .valor {
+    border: 0;
+    border-bottom: 1px solid;
+    border-left: 1px solid;
+    border-right: 1px solid;
+    background-color: blanchedalmond;
+    font-size: 1em;
+    width: 40%;
+    justify-content: end;
+    height: 40px;
+    
+  }
+
+  .tipo {
+    font-size: 1em;
+    width: 40%;
+    justify-content: center;
+    height: 40px;
+  }
+
+  .caixa-textos {
+    background-color: red;
+  }
+
+  .caixa-latas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+  
+  .lata {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #ff950075;
+    border-radius: 10px;
+    width: 45%;
+    height: 180px;
+  }
+
+  .selectinput {
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    display: flex;
+    width: 100%;
+    margin-bottom: 20px;
+    margin-top: 20px;      
+  }
+  
+
+  img {
+    max-width: 100%;
+    max-height: 80%;
+  }
