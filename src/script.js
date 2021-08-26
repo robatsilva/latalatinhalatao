@@ -65,6 +65,11 @@
                   `
     const caixaLatas = document.getElementById('caixa-latas');
     const textoExistente = caixaLatas.innerHTML;
+    if(textoExistente.includes('600 ml')){
+      alert('a lata ja foi inserida');
+      return;
+
+    }
 
     caixaLatas.innerHTML = textoExistente + lata;
   }
