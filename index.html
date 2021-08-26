@@ -97,7 +97,21 @@
       align-items: center;
       display: flex;
       width: 100%;
-
+    }
+    .botao {
+      background: rgba(175, 216, 235, 0.726);
+      border-radius: 3em;
+      border: 0;
+      border: 3px solid scolor-border;
+      color: aquamarine;
+      cursor: pointer;
+      font-weight: bold;
+      outline: none;
+      padding: 1.25em 2em;
+      position: relative;
+      text-transform: uppercase;
+      transform-style: preserve-3d;
+      transition: all 100ms cubic-bezier(.175, .885, .32, 1.275);
 
     }
 
@@ -170,6 +184,7 @@
         <p>R$ <span id="texto1000">xx,xx</span></p>
       </div>
     </div>
+    <div><p>alerta de <button class="botao">ativar</button></p></div>
 </body>
 <script type="text/javascript">
   // Aqui começa o javascript
