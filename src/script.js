@@ -1,8 +1,9 @@
 const listaMl = [269, 350, 473];
 
-escondeLata();
+listaMl.forEach(adicionarLata);
+escondeLatas();
 function selectMudou() {
-  escondeLata();
+  escondeLatas();
   calcular();
 }
 
@@ -21,22 +22,20 @@ function verificaSeEscondeLata(ml){
 }
 
 function calcular() {
+  listaMl.forEach(calcularMl);
+}
+
+function calcularMl(ml){
   let valorLata;
-  let texto269;
-  let texto350;
-  let texto473;
+  let textoMl;
   let valorML;
   
   valorLata = document.getElementById('valorLata').value;
   valorML = document.getElementById('valorML').value;
 
-  texto269 = document.getElementById('texto269');
-  texto350 = document.getElementById('texto350');
-  texto473 = document.getElementById('texto473');
+  textoMl = document.getElementById('texto' + ml);
 
-  texto350.innerText = regra3(valorML, 350, valorLata);
-  texto473.innerText = regra3(valorML, 473, valorLata);
-  texto269.innerText = regra3(valorML, 269, valorLata);
+  textoMl.innerText = regra3(valorML, ml, valorLata);
 }
 
 function regra3(v1G1, v2G1, v1G2) {
@@ -48,21 +47,20 @@ function regra3(v1G1, v2G1, v1G2) {
   return x.toFixed(2);
 }
 
-function adicionarLata(){
+function adicionarLata(ml){
   const lata = `
-                <div class="lata" id='lata600'>
-                  <span>600 ml</span>
-                  <img src="../img/garrafa600.png">
-                  <p>R$ <span id="texto600">xx,xx</span></p>
+                <div class="lata" id='lata${ml}'>
+                  <span>${ml} ml</span>
+                  <img src="../img/garrafa${ml}.png">
+                  <p>R$ <span id="texto${ml}">xx,xx</span></p>
                 </div>
                 `
   const caixaLatas = document.getElementById('caixa-latas');
   const textoExistente = caixaLatas.innerHTML;
-  if(textoExistente.includes('600 ml')){
+  if(textoExistente.includes(ml + ' ml')){
     alert('a lata ja foi inserida');
     return;
-
   }
-
+  listaMl.push(ml);
   caixaLatas.innerHTML = textoExistente + lata;
 }

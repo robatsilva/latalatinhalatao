@@ -15,7 +15,7 @@
     <h2>Lata, latinha ou latão</h2>
   </div>
 
-    <p>Escolha a lata, digite o preço e encontre a lata mais economica</p>
+    <p>Escolha a lata, digite o preço e encontre a opção mais econômica</p>
 
     <div class="selectinput">
       <select onchange="selectMudou()" id="valorML" class="tipo">
@@ -28,23 +28,8 @@
       <input onkeyup="calcular()" id="valorLata" class="valor" placeholder="Digite o valor" type="number" />
     </div>
     <div id="caixa-latas" class="caixa-latas">
-      <div class="lata" id='lata269'>
-        <span>269 ml</span>
-        <img src="../img/lata269.png">
-        <p>R$ <span id="texto269">xx,xx</span></p>
-      </div>
-      <div class="lata" id='lata350'>
-        <span>350 ml</span>
-        <img src="../img/lata.png">
-        <p>R$ <span id="texto350">xx,xx</span></p>
-      </div>
-      <div class="lata" id='lata473'>
-        <span>473 ml</span>
-        <img src="../img/lata473.png">
-        <p>R$ <span id="texto473">xx,xx</span></p>
-      </div>
       <div class="lata lata-adicionar" id='lata473'>
-        <div onclick="adicionarLata()" class="btn-adicionar">+</div>
+        <div onclick="adicionarLata(1000)" class="btn-adicionar">+</div>
       </div>
     </div>
     
