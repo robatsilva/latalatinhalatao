@@ -1,38 +1,42 @@
 <!DOCTYPE html>
 <html lang="pt">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lata, latinha ou latão</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lata, latinha ou latão </title>
-  <link rel="stylesheet" href="style.css">
-
-</head>
-
-<body>
-
-  <div class="caixa">
-  <div class="header"> 
-    <h2>Lata, latinha ou latão</h2>
-  </div>
-
-    <p>Escolha a lata, digite o preço e encontre a opção mais econômica</p>
-
-    <div class="selectinput">
-      <select onchange="selectMudou()" id="valorML" class="tipo">
-       
-        <option value="269">Latinha 269 ml</option>
-        <option value="350">Lata 350 ml</option>
-        <option value="473">Latão 473 ml</option>
-      </select>
-    
-      <input onkeyup="calcular()" id="valorLata" class="valor" placeholder="Digite o valor" type="number" />
+  <body>
+    <div class="header">
+      <h2>Lata, latinha ou latão</h2>
     </div>
-    <div id="caixa-latas" class="caixa-latas">
-      <div class="lata lata-adicionar" id='lata473'>
-        <div onclick="adicionarLata(1000)" class="btn-adicionar">+</div>
+    <div class="caixa">
+      <div
+        onclick="adicionarLata({ml: 600, imagem: '../img/garrafa600.png'})"
+        class="btn-adicionar"
+      >
+        +
       </div>
+
+      <p>Escolha a lata, digite o preço e encontre a opção mais econômica</p>
+
+      <div class="selectinput">
+        <select onchange="selectMudou()" id="valorML" class="tipo">
+          <option value="269">Latinha 269 ml</option>
+          <option value="350">Lata 350 ml</option>
+          <option value="473">Latão 473 ml</option>
+        </select>
+
+        <input
+          onkeyup="calcular()"
+          id="valorLata"
+          class="valor"
+          placeholder="Digite o valor"
+          type="number"
+        />
+      </div>
+      <div id="caixa-latas" class="caixa-latas"></div>
     </div>
-    
-</body>
-<script src="script.js"></script>
+  </body>
+  <script src="script.js"></script>
 </html>

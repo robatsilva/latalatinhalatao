@@ -1,41 +1,54 @@
-const listaMl = [269, 350, 473];
+const listaLata = [
+  {
+    ml: 269,
+    imagem: "../img/lata269.png",
+  },
+  {
+    ml: 350,
+    imagem: "../img/lata.png",
+  },
+  {
+    ml: 473,
+    imagem: "../img/lata473.png",
+  },
+];
 
-listaMl.forEach(adicionarLata);
+listaLata.forEach(adicionarLata);
 escondeLatas();
 function selectMudou() {
   escondeLatas();
   calcular();
 }
 
-function escondeLatas(){
-  listaMl.forEach(verificaSeEscondeLata);
+function escondeLatas() {
+  listaLata.forEach(verificaSeEscondeLata);
 }
 
-function verificaSeEscondeLata(ml){
+function verificaSeEscondeLata(lata) {
   let valorMlSelecionado;
-  valorMlSelecionado = document.getElementById('valorML').value;
-  if (valorMlSelecionado == ml) {
-    document.getElementById("lata" + ml).style.display = 'none';
+  valorMlSelecionado = document.getElementById("valorML").value;
+  if (valorMlSelecionado == lata.ml) {
+    document.getElementById("lata" + lata.ml).style.display = "none";
   } else {
-    document.getElementById("lata" + ml).style.display = 'flex';
+    document.getElementById("lata" + lata.ml).style.display = "flex";
   }
 }
 
 function calcular() {
-  listaMl.forEach(calcularMl);
+  listaLata.forEach(calcularMl);
 }
 
-function calcularMl(ml){
+function calcularMl(lata) {
   let valorLata;
   let textoMl;
   let valorML;
-  
-  valorLata = document.getElementById('valorLata').value;
-  valorML = document.getElementById('valorML').value;
 
-  textoMl = document.getElementById('texto' + ml);
+  valorLata = document.getElementById("valorLata").value;
+  valorML = document.getElementById("valorML").value;
 
-  textoMl.innerText = regra3(valorML, ml, valorLata);
+  textoMl = document.getElementById("texto" + lata.ml);
+
+  textoMl.innerText = regra3(valorML, lata.ml, valorLata);
 }
 
 function regra3(v1G1, v2G1, v1G2) {
@@ -43,24 +56,23 @@ function regra3(v1G1, v2G1, v1G2) {
 
   x = (v2G1 * v1G2) / v1G1;
 
-
   return x.toFixed(2);
 }
 
-function adicionarLata(ml){
-  const lata = `
-                <div class="lata" id='lata${ml}'>
-                  <span>${ml} ml</span>
-                  <img src="../img/garrafa${ml}.png">
-                  <p>R$ <span id="texto${ml}">xx,xx</span></p>
+function adicionarLata(lata) {
+  const lataHtml = `
+                <div class="lata" id='lata${lata.ml}'>
+                  <span>${lata.ml} ml</span>
+                  <img src="${lata.imagem}">
+                  <p>R$ <span id="texto${lata.ml}">xx,xx</span></p>
                 </div>
-                `
-  const caixaLatas = document.getElementById('caixa-latas');
+                `;
+  const caixaLatas = document.getElementById("caixa-latas");
   const textoExistente = caixaLatas.innerHTML;
-  if(textoExistente.includes(ml + ' ml')){
-    alert('a lata ja foi inserida');
+  if (textoExistente.includes(lata.ml + " ml")) {
+    alert("a lata ja foi inserida");
     return;
   }
-  listaMl.push(ml);
-  caixaLatas.innerHTML = textoExistente + lata;
+  listaLata.push(lata);
+  caixaLatas.innerHTML = textoExistente + lataHtml;
 }

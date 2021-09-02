@@ -10,6 +10,7 @@ body {
 }
 
 .caixa {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -104,6 +105,9 @@ img {
 }
 
 .btn-adicionar {
+  position: absolute;
+  top: 20px;
+  right: 20px;
   height: 40px;
   line-height: 40px;
   width: 40px;
