@@ -119,3 +119,35 @@ img {
   text-align: center;
   cursor: pointer;
 }
+
+#caixa-novo-ml {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgba(170, 170, 170, 0.733);
+  top: 0;
+  left: 0;
+}
+
+#caixa-interna-novo-ml {
+  width: 70%;
+  height: 40%;
+  background-color: rgb(162, 201, 174);
+  position: absolute;
+  top: 30%;
+  left: 15%;
+  text-align: center;
+  padding: 10px;
+  border-radius: 5%;
+  box-shadow: 10px 11px 15px rgb(0 0 0 / 51%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+
+  /* 
+    Estilizar os botões, criando uma classe pra botões pra poder usar em qualquer botão
+    Posicionar os botões na caixa com espaço entre eles, usando display flex
+  */
