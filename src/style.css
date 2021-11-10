@@ -153,23 +153,26 @@ img {
 
 
 #caixa-novo-ml-botao > button {
-color: white;
-border-radius: 6px;
-background-color: rgb(83, 27, 136);
-padding: 5px;
+font-family: sans-serif;
 border: none;
-cursor: pointer;
-margin: 20px;
+padding: 10px 20px;
+font-size: 12px;
+outline: none;
+background: transparent;
+color: #f8f9f9;
+background: #903c56;
+border: 1px solid #78969D;
+
+
+
+
 
 }
-#caixa-novo-ml > button:hover {
-  background-color: rgb(133, 18, 133);
+#caixa-novo-ml button:hover {
+  color: #903c56;
+  background: #f8f9f9;
 }
-#caixa-novo-ml-botao > button:active {
 
-  background-color: slateblue;
-  color: chocolate;
-}
 
 
 
