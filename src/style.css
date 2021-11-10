@@ -31,6 +31,7 @@ body {
   justify-content: center;
 }
 
+
 .valor {
   background-color: transparent;
   border-top: 0;
@@ -45,7 +46,10 @@ body {
 }
 
 .valor::placeholder{
-  color: black;
+  
+  color: rgb(83, 27, 136);
+  
+ 
 }
 
 .tipo {
@@ -123,6 +127,7 @@ img {
 #caixa-novo-ml {
   width: 100%;
   height: 100%;
+  
   position: absolute;
   background-color: rgba(170, 170, 170, 0.733);
   top: 0;
@@ -145,6 +150,27 @@ img {
   justify-content: space-around;
   align-items: center;
 }
+
+
+#caixa-novo-ml-botao > button {
+color: white;
+border-radius: 6px;
+background-color: rgb(83, 27, 136);
+padding: 5px;
+border: none;
+cursor: pointer;
+margin: 20px;
+
+}
+#caixa-novo-ml > button:hover {
+  background-color: rgb(133, 18, 133);
+}
+#caixa-novo-ml-botao > button:active {
+
+  background-color: slateblue;
+  color: chocolate;
+}
+
 
 
   /* 
