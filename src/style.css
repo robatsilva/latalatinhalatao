@@ -133,6 +133,7 @@ img {
   background-color: rgba(170, 170, 170, 0.733);
   top: 0;
   left: 0;
+  display: none;
 }
 
 #caixa-interna-novo-ml {

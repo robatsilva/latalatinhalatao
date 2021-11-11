@@ -76,3 +76,8 @@ function adicionarLata(lata) {
   listaLata.push(lata);
   caixaLatas.innerHTML = textoExistente + lataHtml;
 }
+
+function exibirModal() {
+  document.getElementById('caixa-novo-ml').style.display = 'block';
+
+}
