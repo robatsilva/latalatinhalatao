@@ -153,12 +153,12 @@ img {
   align-items: center;
   color: #770e85d6;
 }
-#caixa-novo-ml-botao {
+.appbotao {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-#caixa-novo-ml-botao > button {
+.appbotao button {
  
  color: white;
  border-radius: 6px;
@@ -170,11 +170,11 @@ img {
  justify-content: space-between;
 }
 
-#caixa-novo-ml-botao > button:hover {
+.appbotao button:hover {
   background-color: #770e85de;
 }
 
-#caixa-novo-ml-botao > button:active {
+.appbotao button:active {
   background-color: #410649de;
   color: #0ebe11;
 }
