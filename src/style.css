@@ -3,6 +3,10 @@
   margin: 0;
   padding: 0;
 }
+@font-face {
+  font-family: 'beer';
+  src: url('../fonte/fonte.otf') format('opentype');
+}
 
 html,
 body {
@@ -29,6 +33,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  font-family: 'beer';
 }
 
 .valor {
@@ -45,7 +50,8 @@ body {
 }
 
 .valor::placeholder{
-  color: black;
+  color: rgb(7, 7, 7);
+  text-align: center;
 }
 
 .tipo {
@@ -132,19 +138,46 @@ img {
 #caixa-interna-novo-ml {
   width: 70%;
   height: 40%;
-  background-color: rgb(162, 201, 174);
+  background-color: #adbed3;
   position: absolute;
   top: 30%;
   left: 15%;
   text-align: center;
   padding: 10px;
-  border-radius: 5%;
+  border-radius: 10px;
   box-shadow: 10px 11px 15px rgb(0 0 0 / 51%);
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  color: #770e85d6;
 }
+#caixa-novo-ml-botao {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#caixa-novo-ml-botao > button {
+ 
+ color: white;
+ border-radius: 6px;
+ background-color: #833f83f6;
+ padding: 10px;
+ border: none;
+ cursor: pointer;
+ margin: 10px 20px;
+ justify-content: space-between;
+}
+
+#caixa-novo-ml-botao > button:hover {
+  background-color: #770e85de;
+}
+
+#caixa-novo-ml-botao > button:active {
+  background-color: #410649de;
+  color: #0ebe11;
+}
+
 
 
   /* 
