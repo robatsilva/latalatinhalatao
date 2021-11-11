@@ -178,6 +178,9 @@ img {
   background-color: #410649de;
   color: #0ebe11;
 }
+#fechar {
+  display: none;
+}
 
 
 

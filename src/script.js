@@ -81,3 +81,7 @@ function exibirModal() {
   document.getElementById('caixa-novo-ml').style.display = 'block';
 
 }
+function fechar() {
+  document.getElementById('fechar').style.display = 'none';
+}
+
