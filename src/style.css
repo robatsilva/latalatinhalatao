@@ -133,7 +133,7 @@ img {
   background-color: rgba(170, 170, 170, 0.733);
   top: 0;
   left: 0;
-  display: none;
+  
 }
 
 #caixa-interna-novo-ml {
@@ -152,6 +152,8 @@ img {
   justify-content: space-around;
   align-items: center;
   color: #770e85d6;
+  display: none;
+  
 }
 .appbotao {
   display: flex;
@@ -178,9 +180,8 @@ img {
   background-color: #410649de;
   color: #0ebe11;
 }
-#fechar {
-  display: none;
-}
+
+
 
 
 
