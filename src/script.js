@@ -77,6 +77,15 @@ function adicionarLata(lata) {
   caixaLatas.innerHTML = textoExistente + lataHtml;
 }
 
+function adicionarNovaLata(){
+  const valorDigitadoNaTela = document.getElementById('valor-novo-ml').value;
+  const novaLata = {
+    ml: valorDigitadoNaTela,
+    imagem: "../img/lata269.png",
+  };
+  adicionarLata(novaLata);
+}
+
 function exibirModal() {
   document.getElementById('caixa-novo-ml').style.display = 'block';
 }
