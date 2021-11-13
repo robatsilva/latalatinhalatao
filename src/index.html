@@ -14,6 +14,7 @@
       <div
         onclick="exibirModal()"
         class="btn-adicionar"
+        
       >
         +
       </div>
@@ -40,11 +41,11 @@
 
     <div id="caixa-novo-ml">
       <div id="caixa-interna-novo-ml">
-        <button class="fechar">x</button>
+        <button onclick="fecharModal()"class="fechar">x</button>
         <p><strong>Digite o valor do ml desejado</strong></p>
         <input class="valor" placeholder="Digite o valor" type="number" />
         <div class="appbotao">
-          <button>Cancelar</button>
+          <button onclick="fecharModal()">Cancelar</button>
           <button>Salvar</button>
         </div>
       </div>
