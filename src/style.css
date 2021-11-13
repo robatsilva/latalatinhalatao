@@ -124,6 +124,7 @@ img {
   color: white;
   text-align: center;
   cursor: pointer;
+  
 }
 
 #caixa-novo-ml {
@@ -134,6 +135,7 @@ img {
   top: 0;
   left: 0;
   display: none;
+
 }
 
 #caixa-interna-novo-ml {
@@ -146,13 +148,15 @@ img {
   text-align: center;
   padding: 10px;
   border-radius: 10px;
-  box-shadow: 10px 11px 15px rgb(0 0 0 / 51%);
+  box-shadow: 0 0 0 2px white;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
   color: #770e85d6;
+  
 }
+
 #caixa-novo-ml-botao {
   display: flex;
   flex-direction: row;
@@ -168,6 +172,7 @@ img {
  cursor: pointer;
  margin: 10px 20px;
  justify-content: space-between;
+ box-shadow: 0 0 0 2px white;
 }
 
 #caixa-novo-ml-botao > button:hover {
@@ -179,9 +184,28 @@ img {
   color: #0ebe11;
 }
 
+.fechar {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid white;
+  background-color: #833f83f6;
+  color: white;
+  cursor: pointer;
+  font-size: 1.5em;
+  box-shadow: 10px 11px 15px rgb(0 0 0 / 51%) ;
+}
+
+.fechar:hover {
+  background-color: #770e85de;
+}
+
+.fechar:active {
+  background-color: #410649de;
+}
 
 
-  /* 
-    Estilizar os botões, criando uma classe pra botões pra poder usar em qualquer botão
-    Posicionar os botões na caixa com espaço entre eles, usando display flex
-  */
+  

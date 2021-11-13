@@ -79,5 +79,7 @@ function adicionarLata(lata) {
 
 function exibirModal() {
   document.getElementById('caixa-novo-ml').style.display = 'block';
-
 }
+
+
+
