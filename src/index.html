@@ -2,13 +2,14 @@
 <html lang="pt">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lata, latinha ou latão</title>
+    <title>Lata Latinha Latão</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
   </head>
 
   <body>
     <div class="header">
-      <h2>Lata, latinha ou latão</h2>
+      <h2 class="fontenome">Lata Latinha Latão</h2>
     </div>
     <div class="caixa">
       <div
@@ -19,13 +20,18 @@
         +
       </div>
 
-      <p>Escolha a lata, digite o preço e encontre a opção mais econômica</p>
+      <p class="escolha">Escolha a lata, digite o preço e encontre a opção mais econômica</p>
 
       <div class="selectinput">
         <select onchange="selectMudou()" id="valorML" class="tipo">
           <option value="269">Latinha 269 ml</option>
+              
           <option value="350">Lata 350 ml</option>
+
           <option value="473">Latão 473 ml</option>
+          
+          <option value="600">Garrafa 600 ml</option>
+
         </select>
 
         <input
@@ -39,8 +45,8 @@
       <div id="caixa-latas" class="caixa-latas"></div>
     </div>
 
-    <div id="caixa-novo-ml">
-      <div id="caixa-interna-novo-ml">
+    <div  id="caixa-novo-ml">
+      <div  id="caixa-interna-novo-ml">
         <button onclick="fecharModal()"class="fechar">x</button>
         <p><strong>Digite o valor do ml desejado</strong></p>
         <input id="valor-novo-ml" class="valor" placeholder="Digite o valor" type="number" />

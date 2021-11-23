@@ -11,6 +11,10 @@ const listaLata = [
     ml: 473,
     imagem: "../img/lata473.png",
   },
+  {
+    ml: 600,
+    imagem: "../img/garrafa600.png",
+  },
 ];
 
 listaLata.forEach(adicionarLata);
@@ -65,6 +69,8 @@ function adicionarLata(lata) {
                   <span>${lata.ml} ml</span>
                   <img src="${lata.imagem}">
                   <p>R$ <span id="texto${lata.ml}">xx,xx</span></p>
+                  
+                  <div><button onclick="excluirgarrafa()"class="deletar"> x </button></div>;
                 </div>
                 `;
   const caixaLatas = document.getElementById("caixa-latas");
@@ -94,4 +100,9 @@ function exibirModal() {
 function fecharModal() {
 
   document.getElementById('caixa-novo-ml').style.display = 'none' ;
+}
+
+function fechar() {
+
+  document.getElementById('excluirgarrafa').style.display = 'none' ;
 }

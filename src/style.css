@@ -1,5 +1,5 @@
 * {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica,'beer'f;
   margin: 0;
   padding: 0;
 }
@@ -19,14 +19,16 @@ body {
   align-items: center;
   justify-content: space-evenly;
   flex-direction: column;
-  background-image: url("../img/fundo.jfif");
+  background-image: url("../img/cerveja.jpg");
+  background-size: 100%;
   padding: 10px;
   min-height: 100%;
   margin-top: 64px;
+  
 }
 .header {
   height: 64px;
-  background-color: brown;
+  background-color: #F2EEE6;
   width: 100%;
   position: fixed;
   top: 0;
@@ -35,6 +37,13 @@ body {
   justify-content: center;
   font-family: 'beer';
 }
+
+.fontenome {
+  color: black;
+  font: 40px 'beer';
+
+}
+
 
 .valor {
   background-color: transparent;
@@ -72,6 +81,7 @@ body {
 }
 
 .caixa-latas {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -87,6 +97,7 @@ body {
   border-radius: 10px;
   width: 45%;
   height: 180px;
+  position: relative;
 }
 
 .selectinput {
@@ -206,5 +217,17 @@ img {
   background-color: #410649de;
 }
 
+.deletar {
+  font-size: 1.5em;
+  border-radius: 20px;
+  position: relative;
+  background-color: red;
+  color: white;
+  font: bolder;
+  cursor: pointer;
+  
+  
+ 
+}
 
   
