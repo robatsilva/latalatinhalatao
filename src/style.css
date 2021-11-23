@@ -219,14 +219,15 @@ img {
 
 .deletar {
   font-size: 1.5em;
-  border-radius: 20px;
+  border-radius: 50%;
   position: absolute;
-  background-color: #240e0e;
+  background-color: hsla(0, 44%, 10%, 0.446);
   color: white;
   font: bolder;
   cursor: pointer;
   right: -3px;
   bottom: 161px;
+  width: 15%;
   
   
  

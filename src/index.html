@@ -46,13 +46,13 @@
     </div>
 
     <div  onclick="fecharModal(event)" id="caixa-novo-ml">
-      <div onclick="event.preventDefault()" id="caixa-interna-novo-ml">
+      <div onclick="event.stopPropagation()" id="caixa-interna-novo-ml">
         <button onclick="fecharModal(event)"class="fechar">x</button>
         <p><strong>Digite o valor do ml desejado</strong></p>
         <input id="valor-novo-ml" class="valor" placeholder="Digite o valor" type="number" />
         <div class="appbotao">
           <button onclick="fecharModal(event)">Cancelar</button>
-          <button onclick="adicionarNovaLata()">Salvar</button>
+          <button onclick="adicionarNovaLata(),fecharModal(event)">Salvar</button>
         </div>
       </div>
     </div>
