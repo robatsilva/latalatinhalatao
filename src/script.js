@@ -70,7 +70,7 @@ function adicionarLata(lata) {
                   <img src="${lata.imagem}">
                   <p>R$ <span id="texto${lata.ml}">xx,xx</span></p>
                   
-                  <div><button onclick="excluirgarrafa()"class="deletar"> x </button></div>;
+                  <button onclick="excluirgarrafa()"class="deletar"> x </button>
                 </div>
                 `;
   const caixaLatas = document.getElementById("caixa-latas");
@@ -97,8 +97,8 @@ function exibirModal() {
 }
 
 
-function fecharModal() {
-
+function fecharModal(evento) {
+  evento.preventDefault();
   document.getElementById('caixa-novo-ml').style.display = 'none' ;
 }
 

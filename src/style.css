@@ -20,7 +20,7 @@ body {
   justify-content: space-evenly;
   flex-direction: column;
   background-image: url("../img/cerveja.jpg");
-  background-size: 100%;
+  background-size: cover;
   padding: 10px;
   min-height: 100%;
   margin-top: 64px;
@@ -220,11 +220,13 @@ img {
 .deletar {
   font-size: 1.5em;
   border-radius: 20px;
-  position: relative;
-  background-color: red;
+  position: absolute;
+  background-color: #240e0e;
   color: white;
   font: bolder;
   cursor: pointer;
+  right: -3px;
+  bottom: 161px;
   
   
  
