@@ -1,5 +1,5 @@
 * {
-  font-family: Arial, Helvetica,'beer'f;
+  font-family: Arial, Helvetica,'beer';
   margin: 0;
   padding: 0;
 }
@@ -19,7 +19,7 @@ body {
   align-items: center;
   justify-content: space-evenly;
   flex-direction: column;
-  background-image: url("../img/cerveja.jpg");
+  background-image: url("../img/breja2.jpg");
   background-size: cover;
   padding: 10px;
   min-height: 100%;
@@ -64,6 +64,7 @@ body {
 }
 
 .tipo {
+  font: bolder;
   font-size: 1em;
   width: 40%;
   justify-content: center;
@@ -93,14 +94,21 @@ body {
   display: flex;
   align-items: center;
   flex-direction: column;
-  background-image: linear-gradient(45deg, #db8103, transparent);
+  background-image: linear-gradient(45deg, #db810356, transparent);
   border-radius: 10px;
-  width: 45%;
+  width: 36%;
   height: 180px;
   position: relative;
 }
 
+.escolha {
+  font-size: 1.3em;
+  color: rgba(13, 3, 3, 0.727);
+  text-align: center;
+}
+
 .selectinput {
+  font: bold;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
@@ -123,7 +131,7 @@ img {
 
 .btn-adicionar {
   position: absolute;
-  top: 20px;
+  top: 83px;
   right: 20px;
   height: 40px;
   line-height: 40px;
