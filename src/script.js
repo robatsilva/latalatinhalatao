@@ -81,6 +81,7 @@ function adicionarLata(lata) {
   }
   listaLata.push(lata);
   caixaLatas.innerHTML = textoExistente + lataHtml;
+   fecharModal()
 }
 
 function adicionarNovaLata(){
@@ -97,9 +98,9 @@ function exibirModal() {
 }
 
 
-function fecharModal(evento) {
-  evento.preventDefault();
+function fecharModal() {
   document.getElementById('caixa-novo-ml').style.display = 'none' ;
+  
 }
 
 function fechar() {
