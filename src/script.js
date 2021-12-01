@@ -18,13 +18,15 @@ const listaLata = [
 ];
 
 listaLata.forEach(adicionarLata);
-escondeLatas();
+
+escondeLataSelecionada();
+
 function selectMudou() {
-  escondeLatas();
+  escondeLataSelecionada();
   calcular();
 }
 
-function escondeLatas() {
+function escondeLataSelecionada() {
   listaLata.forEach(verificaSeEscondeLata);
 }
 
@@ -81,7 +83,16 @@ function adicionarLata(lata) {
   }
   listaLata.push(lata);
   caixaLatas.innerHTML = textoExistente + lataHtml;
-   fecharModal()
+  adicionarOptionNoSelect(lata.ml)
+  fecharModal();
+}
+
+function adicionarOptionNoSelect(ml){
+  const option = document.createElement('option');
+  option.value = ml;
+  option.innerHTML = ml + ' ml';
+  const select = document.getElementById("valorML");
+  select.add(option);
 }
 
 function adicionarNovaLata(){
