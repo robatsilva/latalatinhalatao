@@ -95,13 +95,15 @@ function adicionarNovaLata(){
 
 function exibirModal() {
   document.getElementById('caixa-novo-ml').style.display = 'block';
+  document.getElementById('valor-novo-ml').value = '';
 }
 
 
 function fecharModal() {
-  document.getElementById('caixa-novo-ml').style.display = 'none' ;
+  document.getElementById('caixa-novo-ml').style.display = 'none';
   
 }
+ 
 
 function fechar() {
 
