@@ -66,13 +66,14 @@ function regra3(v1G1, v2G1, v1G2) {
 }
 
 function adicionarLata(lata) {
+  console.log('entrou no adicionar lata')
   const lataHtml = `
                 <div class="lata" id='lata${lata.ml}'>
                   <span>${lata.ml} ml</span>
                   <img src="${lata.imagem}">
                   <p>R$ <span id="texto${lata.ml}">xx,xx</span></p>
                   
-                  <button onclick="excluirgarrafa()"class="deletar"> x </button>
+                  <button onclick="removerLata(${lata.ml})"class="deletar"> x </button>
                 </div>
                 `;
   const caixaLatas = document.getElementById("caixa-latas");
@@ -83,7 +84,6 @@ function adicionarLata(lata) {
   }
   listaLata.push(lata);
   caixaLatas.innerHTML = textoExistente + lataHtml;
-  adicionarOptionNoSelect(lata.ml)
   fecharModal();
 }
 
@@ -102,6 +102,7 @@ function adicionarNovaLata(){
     imagem: "../img/lata269.png",
   };
   adicionarLata(novaLata);
+  adicionarOptionNoSelect(novaLata.ml);
 }
 
 function exibirModal() {
@@ -116,7 +117,8 @@ function fecharModal() {
 }
  
 
-function fechar() {
-
-  document.getElementById('excluirgarrafa').style.display = 'none' ;
+function removerLata(ml) {
+  document.getElementById('lata' + ml).style.display = 'none' ;
+  document.getElementById('option' + ml).style.display = 'none' ;
+  //remover lata da lista
 }
