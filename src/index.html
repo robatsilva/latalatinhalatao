@@ -23,16 +23,17 @@
       <p class="escolha"><strong>Escolha a lata, digite o preço e encontre a opção mais econômica</strong></p>
 
       <div class="selectinput">
-        <select onchange="selectMudou()" id="valorML" class="tipo">
-          <option value="269">Latinha 269 ml</option>
+        <p></p>
+        <div onchange="selectMudou()" id="valorML" class="tipo">
+          <div class="bolinha" value="269">Latinha 269 ml</div>
               
-          <option value="350">Lata 350 ml</option>
+          <div class="bolinha" value="350">Lata 350 ml</div>
 
-          <option value="473">Latão 473 ml</option>
+          <div class="bolinha" value="473">Latão 473 ml</div>
           
-          <option value="600">Garrafa 600 ml</option>
+          <div class="bolinha" value="600">Garrafa 600 ml</div>
 
-        </select>
+        </div>
 
         <input
           onkeyup="calcular()"
