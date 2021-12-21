@@ -1,5 +1,5 @@
 * {
-  font-family: Arial, Helvetica,'beer';
+  font-family: Arial,'beer','Bebas Neue';
   margin: 0;
   padding: 0;
 }
@@ -8,8 +8,9 @@
   src: url('../fonte/fonte.otf') format('opentype');
 }
 
-html,
-body {
+
+
+html,body {
   height: 100%;
 }
 
@@ -231,8 +232,22 @@ img {
   bottom: 161px;
   width: 32px;
   
-  
- 
+}
+
+.bolinha {
+  font-family: 'Bebas Neue';
+  font-size: 1.3em bold;
+  background-color: yellow;
+  border-radius: 15px;
+  padding: 5px;
+  border: 3px solid yellow;
+  margin-bottom: 50px;
+}
+
+.bolinha:hover {
+  background-color: rgb(158, 158, 30);
+  cursor: pointer;
+  color: white;
 }
 
   
