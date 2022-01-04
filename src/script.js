@@ -1,3 +1,7 @@
+
+definirFoco("valorLata");
+  
+
 const listaLata = [
   {
     ml: 269,
@@ -20,6 +24,8 @@ const listaLata = [
 listaLata.forEach(adicionarLata);
 
 escondeLataSelecionada();
+
+
 
 function selectMudou() {
   escondeLataSelecionada();
@@ -108,11 +114,14 @@ function adicionarNovaLata(){
 function exibirModal() {
   document.getElementById('caixa-novo-ml').style.display = 'block';
   document.getElementById('valor-novo-ml').value = '';
+  definirFoco('valor-novo-ml');
 }
 
 
 function fecharModal() {
   document.getElementById('caixa-novo-ml').style.display = 'none';
+
+  definirFoco("valorLata");
   
 }
  
@@ -121,3 +130,18 @@ function fechar() {
 
   document.getElementById('excluirgarrafa').style.display = 'none' ;
 }
+
+function definirFoco(id) {
+  
+  var valorLata = document.getElementById(id);
+  valorLata.focus();
+
+}
+ 
+function limparImput() {
+
+  var 
+}
+
+
+
