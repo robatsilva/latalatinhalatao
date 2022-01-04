@@ -50,6 +50,7 @@ function calcularMl(lata) {
   let valorML;
 
   valorLata = document.getElementById("valorLata").value;
+  
   valorML = document.getElementById("valorML").value;
 
   textoMl = document.getElementById("texto" + lata.ml);
