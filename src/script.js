@@ -27,7 +27,7 @@ escondeLataSelecionada();
 
 
 
-function selectMudou() {
+function selectMudou(valorMlSelecionado) {
   escondeLataSelecionada();
   calcular();
 }
@@ -90,7 +90,7 @@ function adicionarLata(lata) {
   }
   listaLata.push(lata);
   caixaLatas.innerHTML = textoExistente + lataHtml;
-  adicionarOptionNoSelect(lata.ml)
+  // adicionarOptionNoSelect(lata.ml)
   fecharModal();
 }
 
