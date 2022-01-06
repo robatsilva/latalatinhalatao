@@ -103,7 +103,7 @@ function adicionarOptionNoSelect(ml){
 }
 
 function adicionarNovaLata(){
-  const valorDigitadoNaTela = document.getElementById('valor-novo-ml').value;
+  const valorDigitadoNaTela = document.getElementById('valor-novo-ml').value
   const novaLata = {
     ml: valorDigitadoNaTela,
     imagem: "../img/lata269.png",
@@ -113,15 +113,16 @@ function adicionarNovaLata(){
 
 function exibirModal() {
   document.getElementById('caixa-novo-ml').style.display = 'block';
-  document.getElementById('valor-novo-ml').value = '';
+  limparImput('valor-novo-ml');
   definirFoco('valor-novo-ml');
 }
 
 
 function fecharModal() {
   document.getElementById('caixa-novo-ml').style.display = 'none';
-
+  limparImput('valorLata');
   definirFoco("valorLata");
+  
   
 }
  
@@ -138,9 +139,10 @@ function definirFoco(id) {
 
 }
  
-function limparImput() {
+function limparImput(id) {
 
-  var 
+  var limparCampo = document.getElementById(id);
+  limparCampo.value = '';
 }
 
 
