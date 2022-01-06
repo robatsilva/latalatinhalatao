@@ -28,17 +28,19 @@ escondeLataSelecionada();
 
 
 function selectMudou(valorMlSelecionado) {
-  escondeLataSelecionada();
-  calcular();
+  escondeLataSelecionada(valorMlSelecionado);
+  calcular(valorMlSelecionado);
 }
 
-function escondeLataSelecionada() {
-  listaLata.forEach(verificaSeEscondeLata);
+function escondeLataSelecionada(valorMlSelecionado) {
+  // listaLata.forEach(verificaSeEscondeLata);
+
+  for(let lata of listaLata){
+    verificaSeEscondeLata(lata, valorMlSelecionado)
+  }
 }
 
-function verificaSeEscondeLata(lata) {
-  let valorMlSelecionado;
-  valorMlSelecionado = document.getElementById("valorML").value;
+function verificaSeEscondeLata(lata, valorMlSelecionado) {
   if (valorMlSelecionado == lata.ml) {
     document.getElementById("lata" + lata.ml).style.display = "none";
   } else {
@@ -46,22 +48,22 @@ function verificaSeEscondeLata(lata) {
   }
 }
 
-function calcular() {
-  listaLata.forEach(calcularMl);
+function calcular(valorMlSelecionado) {
+  for(let lata of listaLata){
+    calcularMl(lata, valorMlSelecionado)
+  }
 }
 
-function calcularMl(lata) {
+function calcularMl(lata, valorMlSelecionado) {
   let valorLata;
   let textoMl;
   let valorML;
 
   valorLata = document.getElementById("valorLata").value;
-  
-  valorML = document.getElementById("valorML").value;
 
   textoMl = document.getElementById("texto" + lata.ml);
 
-  textoMl.innerText = regra3(valorML, lata.ml, valorLata);
+  textoMl.innerText = regra3(valorMlSelecionado, lata.ml, valorLata);
 }
 
 function regra3(v1G1, v2G1, v1G2) {
