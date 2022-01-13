@@ -192,11 +192,6 @@ img {
   background-color: #E6AC00;
 }
 
-.appbotao button:active {
-  background-color: #E8C70C;
-  color: white;
-}
-
 .fechar {
   position: absolute;
   top: -20px;
@@ -247,6 +242,11 @@ img {
 .bolinha:hover {
   background-color: #9e9e1e;
   cursor: pointer;
+  color: white;
+}
+
+.botao-ativo {
+  background-color: #9e9e1e;
   color: white;
 }
 
